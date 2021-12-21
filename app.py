@@ -19,7 +19,7 @@ def loadPage():
 	return render_template('home.html', query="")
 
 
-@app.route("/", methods=['POST'])
+@app.route("/predict", methods=['POST'])
 def predict():
     
     '''
@@ -86,4 +86,5 @@ def predict():
                            query10 = request.form['query10']) 
                     
     
-app.run()
+if __name__ == "__main__":
+    app.run(debug=True)
