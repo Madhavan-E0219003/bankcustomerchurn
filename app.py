@@ -71,7 +71,7 @@ def predict():
         o2 = "Confidence: {}".format(probablity*100)
     else:
         o1 = "This customer is likely to continue!!"
-        o2 = "Confidence: {}".format(probablity*100)
+        o2 = ""
         
     return render_template('home.html', output1=o1, output2=o2, 
                            query1 = request.form['query1'], 
